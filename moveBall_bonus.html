@@ -1,0 +1,269 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:blueviolet"></div>
+
+<div id="ball2" style="
+z-index:4;
+position:absolute;
+left:0px;
+top:0px;
+width:20px;
+height:20px;
+border-radius:50%;
+background:yellow"></div>
+
+<div id="ball3" style="
+  z-index:3;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:fuchsia"></div>
+
+<div id="ball4" style="
+  z-index:2;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:aqua"></div>
+
+<div id="ball5" style="
+z-index:5;
+position:absolute;
+left:0px;
+top:0px;
+width:40px;
+height:40px;
+border-radius:50%;
+background:red"></div>
+
+<script>
+
+var velocityX = 100;
+var velocityY = 100;
+var positionX = 0;
+var positionY = 0;
+var ball = document.getElementById('ball');
+
+var velocityX2 = 50;
+var velocityY2 = 50;
+var positionX2 = 0;
+var positionY2 = 0;
+var ball2 = document.getElementById('ball2');
+
+var velocityX3 = 50;
+var velocityY3 = 100;
+var positionX3 = 0;
+var positionY3 = 0;
+var ball3 = document.getElementById('ball3');
+
+var velocityX4 = 25;
+var velocityY4 = 30;
+var positionX4 = 0;
+var positionY4 = 0;
+var ball4 = document.getElementById('ball4');
+
+var velocityX5 = 100;
+var velocityY5 = 50;
+var positionX5 = 0;
+var positionY5 = 0;
+var ball5 = document.getElementById('ball5');
+
+var xmax = 500;
+var xmin = 0;
+var ymax = 300;
+var ymin = 0;
+
+var xreverse = false;
+var yreverse = false;
+
+var xreverse2 = false;
+var yreverse2 = false;
+
+var xreverse3 = false;
+var yreverse3 = false;
+
+var xreverse4 = false;
+var yreverse4 = false;
+
+var xreverse5 = false;
+var yreverse5 = false;
+
+// YOUR CODE 
+function moveBall(){
+  //x-movement ball
+  if(xreverse === false){
+    positionX += velocityX;
+    ball.style.background = "blueviolet";
+  }
+  if(xreverse === true){
+    positionX -= velocityX;
+    ball.style.background = "navy";
+  }
+  if(positionX===xmin || positionX === xmax) {
+    xreverse = !xreverse;
+  }
+
+  ball.style.left = positionX + "px";
+  
+  //x-movement ball2
+  if(xreverse2 === false){
+    positionX2 += velocityX2;
+    ball2.style.background = "yellow";
+  }
+  if(xreverse2 === true){
+    positionX2 -= velocityX2;
+    ball2.style.background = "orange";
+  }
+  if(positionX2===xmin || positionX2 === xmax) {
+    xreverse2 = !xreverse2;
+  }
+
+  ball2.style.left = positionX2 + "px";
+
+  //x-movement ball3
+  if(xreverse3 === false){
+    positionX3 += velocityX3;
+    ball3.style.background = "fuchsia";
+  }
+  if(xreverse3 === true){
+    positionX3 -= velocityX3;
+    ball3.style.background = "teal";
+  }
+  if(positionX3===xmin || positionX3 === xmax) {
+    xreverse3 = !xreverse3;
+  }
+
+  ball3.style.left = positionX3 + "px";
+
+  //x-movement ball4
+  if(xreverse4 === false){
+    positionX4 += velocityX4;
+    ball4.style.background = "aqua";
+  }
+  if(xreverse4 === true){
+    positionX4 -= velocityX4;
+    ball4.style.background = "olive";
+  }
+  if(positionX4===xmin || positionX4 === xmax) {
+    xreverse4 = !xreverse4;
+  }
+
+  ball4.style.left = positionX4 + "px";
+
+  //x-movement ball5
+  if(xreverse5 === false){
+    positionX5 += velocityX5;
+    ball5.style.background = "red";
+  }
+  if(xreverse5 === true){
+    positionX5 -= velocityX5;
+    ball5.style.background = "maroon";
+  }
+  if(positionX5===xmin || positionX5 === xmax) {
+    xreverse5 = !xreverse5;
+  }
+
+  ball5.style.left = positionX5 + "px";
+
+  //y-movement ball
+  if(yreverse === false){
+    positionY += velocityY;
+    ball.style.width= 50;
+    ball.style.height = 50;
+  }
+  if(yreverse === true){
+    positionY -= velocityX;
+    ball.style.width= 20;
+    ball.style.height = 20;
+  }
+  if(positionY===ymin || positionY === ymax) {
+    yreverse = !yreverse;
+  }
+
+  ball.style.top = positionY + "px";
+
+  //y-movement ball2
+  if(yreverse2 === false){
+    positionY2 += velocityY2;
+    ball2.style.width= 20;
+    ball2.style.height = 20;
+  }
+  if(yreverse2 === true){
+    positionY2 -= velocityX2;
+    ball2.style.width= 80;
+    ball2.style.height = 80;
+  }
+  if(positionY2===ymin || positionY2 === ymax) {
+    yreverse2 = !yreverse2;
+  }
+
+  ball2.style.top = positionY2 + "px";
+
+  //y-movement ball3
+  if(yreverse3 === false){
+    positionY3 += velocityY3;
+    ball3.style.width= 80;
+    ball3.style.height = 80;
+  }
+  if(yreverse3 === true){
+    positionY3 -= velocityX3;
+    ball3.style.width= 50;
+    ball3.style.height = 50;
+  }
+  if(positionY3===ymin || positionY3 === ymax) {
+    yreverse3 = !yreverse3;
+  }
+
+  ball3.style.top = positionY3 + "px";
+
+  //y-movement ball4
+  if(yreverse4 === false){
+    positionY4 += velocityY4;
+    ball4.style.width= 60;
+    ball4.style.height = 60;
+  }
+  if(yreverse4 === true){
+    positionY4 -= velocityX4;
+    ball4.style.width= 40;
+    ball4.style.height = 40;
+  }
+  if(positionY4===ymin || positionY4 === ymax) {
+    yreverse4 = !yreverse4;
+  }
+
+  ball4.style.top = positionY4 + "px";
+}
+
+  //y-movement ball5
+  if(yreverse5 === false){
+    positionY5 += velocityY5;
+    ball.style.width= 40;
+    ball.style.height = 40;
+  }
+  if(yreverse5 === true){
+    positionY5 -= velocityX5;
+    ball5.style.width= 10;
+    ball5.style.height = 10;
+  }
+  if(positionY5===ymin || positionY5 === ymax) {
+    yreverse5 = !yreverse5;
+  }
+
+  ball5.style.top = positionY5 + "px";
+
+
+setInterval(moveBall, 200);
+// ----------------
+</script>
