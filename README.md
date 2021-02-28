@@ -1,7 +1,7 @@
 # moveBall
 Using basic graphics and div tags to create moving balls of changing colors and sizes
 
-<h2>installation</h2>
+<h2>Installation</h2>
 To look at the results of the code, copy and paste into your favorite text editor and save it as a .html file. Then click on the file. It should open up in your default browser.
 
 <h2>Usage</h2>
